@@ -6,7 +6,7 @@
   <link href="https://www.fomal.cc/atom.xml" rel="self"/>
   
   <link href="https://www.fomal.cc/"/>
-  <updated>2023-05-14T06:50:32.397Z</updated>
+  <updated>2023-05-14T06:53:40.365Z</updated>
   <id>https://www.fomal.cc/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.fomal.cc/posts/47360564.html"/>
     <id>https://www.fomal.cc/posts/47360564.html</id>
     <published>2023-05-14T06:25:59.000Z</published>
-    <updated>2023-05-14T06:50:32.397Z</updated>
+    <updated>2023-05-14T06:53:40.365Z</updated>
     
     <content type="html"><![CDATA[<p>#通信问题汇总<br>1.在本地与github仓库通信(如clone、push、hexo d)时出现Please make sure you have the correct access rights and the repository exists.</p><p>出现此报错时，首先检查网络环境，如果开了代理则尝试关掉代理，包括steam++。<br>如果排除网络环境则可以尝试更改端口号，通信默认使用的端口号容易被占用。<br>可以先用一下命令临时修改端口号进行测试：<br>ssh -T -p 443 <a href="mailto:git@github.com">git@github.com</a><br>此命令为临时修改端口号为443并测试与GitHub的连接。<br>若成功连接则可以在.ssh文件夹下创建config文件指定连接使用的端口号：<br>Host <a href="http://github.com">github.com</a><br>User git<br>Hostname <a href="http://ssh.github.com">ssh.github.com</a><br>PreferredAuthentications publickey<br>IdentityFile ~/.ssh/id_rsa<br>Port 443</p><p>如果尝试以上步骤还是无法建立通信，则可以试试重置ssh密钥，先删掉之前生成的本地rsa密钥(.ssh文件夹下的所有文件)并重新生成一份密钥，然后去GitHub重新添加密钥。<br>可以使用以下命令生成ssh密钥：<br>ssh-keygen -t rsa -C “你的邮箱”<br>注意在实际输入的时候邮箱不需要带引号<br>或者可以更改本地的hosts文件，添加&quot;140.82.113.4 <a href="http://github.com">github.com</a>&quot;，steam++(已改名为Watt toolkit)可以不需要更改权限直接修改此文件。</p><p>2.图床的访问<br>使用vercel部署的GitHub图床访问时使用代理更快。<br>访问方式：<a href="https://picbed.Domain.Name/img/filename.jpg">https://picbed.Domain.Name/img/filename.jpg</a><br>域名后面是图床里面文件的路径(不包括仓库名)。</p>]]></content>
     
@@ -43,7 +43,7 @@
     <link href="https://www.fomal.cc/posts/22755565.html"/>
     <id>https://www.fomal.cc/posts/22755565.html</id>
     <published>2023-05-14T06:25:20.000Z</published>
-    <updated>2023-05-14T06:25:20.167Z</updated>
+    <updated>2023-05-14T06:51:27.145Z</updated>
     
     
     
