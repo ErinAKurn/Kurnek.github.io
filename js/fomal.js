@@ -674,8 +674,8 @@ if (document.body.clientWidth > 992) {
         zoom: 0.9,
         borderRadius: 5 + 'px',
         right: 55.6 + 'px',
-        nekoImg: "https://bu.dusays.com/2022/07/20/62d812db74be9.png",
-        hoverMsg: "春天啦~",
+        nekoImg: "https://picbed.xfling.top/img/maomao.webp",
+        hoverMsg: "喵~",
         color: "var(--theme-color)",
         during: 500,
         blog_body: "body",
@@ -766,7 +766,7 @@ if (document.body.clientWidth > 992) {
     }
     );
     //自定义（去掉以下注释，并注释掉其他的查看效果）
-    /*
+    
     $("#myscoll").nekoScroll({
         nekoname:'neko1', //nekoname，相当于id
         nekoImg:'img/猫咪.png', //neko的背景图片
@@ -782,7 +782,7 @@ if (document.body.clientWidth > 992) {
         z_index:100, //不用解释了吧
         during:1200, //从顶部到底部滑动的时长
     });
-    */
+    
   })
 }
 
@@ -1113,13 +1113,13 @@ function changeMouseMode() {
 var now1 = new Date();
 
 function createtime1() {
-  var grt = new Date("08/09/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  var grt = new Date("05/01/2023 00:00:00"); //此处修改你的建站时间或者网站上线时间
   now1.setTime(now1.getTime() + 250);
   var days = (now1 - grt) / 1000 / 60 / 60 / 24;
   var dnum = Math.floor(days);
 
   var ascll = [
-    `欢迎来到Fomalhaut🥝の小家!`,
+    `欢迎来到Kurnekの秘密基地!`,
     `Future is now 🍭🍭🍭`,
     `
         
@@ -1172,7 +1172,7 @@ function createtime2() {
   setTimeout(
     console.warn.bind(
       console,
-      "%c ⚡ Powered by Fomalhaut🥝 %c 你正在访问Fomalhaut🥝の小家",
+      "%c ⚡ Powered by Kurnek %c 你正在访问Kurnekの秘密基地",
       "color:white; background-color:#f0ad4e",
       ""
     )
@@ -1282,8 +1282,8 @@ function share_() {
   try {
     // 截取标题
     var title = document.title;
-    var subTitle = title.endsWith("| Fomalhaut🥝") ? title.substring(0, title.length - 14) : title;
-    navigator.clipboard.writeText('Fomalhaut🥝的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
+    var subTitle = title.endsWith("| Kurnek") ? title.substring(0, title.length - 14) : title;
+    navigator.clipboard.writeText('Kurnek的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
     new Vue({
       data: function () {
         this.$notify({
@@ -1321,11 +1321,11 @@ var titleTime;
 document.addEventListener('visibilitychange', function () {
   if (document.hidden) {
     //离开当前页面时标签显示内容
-    document.title = '👀跑哪里去了~';
+    document.title = '૮₍ ˃ ⤙ ˂ ₎ა';
     clearTimeout(titleTime);
   } else {
     //返回当前页面时标签显示内容
-    document.title = '🐖抓到你啦～';
+    document.title = '(⑅˃◡˂⑅)';
     //两秒后变回正常标题
     titleTime = setTimeout(function () {
       document.title = OriginTitile;
@@ -2420,50 +2420,8 @@ m = d.getMonth() + 1;
 dd = d.getDate();
 y = d.getFullYear();
 
-// 公祭日
-if (m == 9 && dd == 18) {
-  document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("今天是九一八事变" + (y - 1931).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 7 && dd == 7) {
-  document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("今天是卢沟桥事变" + (y - 1937).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 12 && dd == 13) {
-  document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("今天是南京大屠杀" + (y - 1937).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 8 && dd == 14) {
-  document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("今天是世界慰安妇纪念日\n🪔勿忘国耻，振兴中华🪔");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-
 
 // 节假日
-if (m == 10 && dd <= 3) {//国庆节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝祖国" + (y - 1949).toString() + "岁生日快乐！");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 8 && dd == 15) {//搞来玩的，小日子投降
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("小日子已经投降" + (y - 1945).toString() + "年了😃");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
 if (m == 1 && dd == 1) {//元旦节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
     Swal.fire(y.toString() + "年元旦快乐！🎉");
@@ -2476,7 +2434,8 @@ if (m == 3 && dd == 8) {//妇女节
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
-l = ["非常抱歉，因为不可控原因，博客将于明天停止运营！", "好消息，日本没了！", "美国垮了，原因竟然是川普！", "微软垮了！", "你的电脑已经过载，建议立即关机！", "你知道吗？站长很喜欢你哦！", "一分钟有61秒哦", "你喜欢的人跟别人跑了！"]
+
+l = ["非常抱歉，因为不可控原因，博客将于明天停止运营！", "美国垮了，原因竟然是川普！", "微软垮了！", "你的电脑已经过载，建议立即关机！", "你知道吗？站长很喜欢你哦！", "一分钟有61秒哦", "你喜欢的人跟别人跑了！"]
 if (m == 4 && dd == 1) {//愚人节，随机谎话
   if (sessionStorage.getItem("isPopupWindow") != "1") {
     Swal.fire(l[Math.floor(Math.random() * l.length)]);
@@ -2501,12 +2460,7 @@ if (m == 5 && dd == 20) {//520
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
-if (m == 7 && dd == 1) {//建党节
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝中国共产党" + (y - 1921).toString() + "岁生日快乐！");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
+
 if (m == 9 && dd == 10) {//教师节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
     Swal.fire("各位老师们教师节快乐！👩‍🏫");
@@ -2519,15 +2473,15 @@ if (m == 12 && dd == 25) {//圣诞节
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
-if (m == 8 && dd == 11) {//站长生日
+if (m == 10 && dd == 5) {//站长生日
   if (sessionStorage.getItem("isPopupWindow") != "1") {
     Swal.fire("祝站长" + (y - 1998).toString() + "岁生日快乐！🥝");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
-if (m == 6 && dd == 30) {//小猫咪生日
+if (m == 7 && dd == 10) {//小猫咪生日
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝小猫咪" + (y - 1999).toString() + "岁生日快乐！🐱");
+    Swal.fire("祝kurnek" + (y - 1999).toString() + "岁生日快乐！🐱");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
@@ -2789,7 +2743,7 @@ function createtime() {
   var dis = Math.trunc(23400000000 + ((now - start) / 1000) * 17); // 距离=秒数*速度 记住转换毫秒
   var unit = (dis / 149600000).toFixed(6);  // 天文单位
   // 网站诞生时间
-  var grt = new Date("08/09/2022 00:00:00");
+  var grt = new Date("05/01/2023 00:00:00");
   var days = (now - grt) / 1e3 / 60 / 60 / 24,
     dnum = Math.floor(days),
     hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,
