@@ -674,7 +674,7 @@ if (document.body.clientWidth > 992) {
         zoom: 0.9,
         borderRadius: 5 + 'px',
         right: 55.6 + 'px',
-        nekoImg: "https://picbed.xfling.top/img/Kurnek.webp",
+        nekoImg: "https://picbed.xfling.top/img/maomao.webp",
         hoverMsg: "喵~",
         color: "var(--theme-color)",
         during: 500,
